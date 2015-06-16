@@ -1,0 +1,40 @@
+<div class="container">
+
+  <div ng-include="'app/components/navbar/navbar.html'"></div>
+
+  
+  <div class="row">
+    <div class="col-md-12">
+      
+    <div class="panel panel-default">
+       <div class="panel-heading">{{ArticleData.title}}</div>
+        <div class="panel-body">
+          {{ArticleData.content}}
+          <a target="_blank" href="{{ArticleData.url}}">{{ArticleData.url}}</a>
+        </div>
+    </div>
+
+    <button class="btn btn-default" ng-click="goBack()">Back</button>
+    </div>
+  </div>
+  
+  <br/>
+
+  <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input type="text" class="form-control" id="inputEmail" ng-model="inputEmail" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="commentContent">Comment</label>
+            <textarea class="form-control" ng-model="commentContent" id="commentContent" placeholder=""></textarea>
+        </div>
+        
+        <button ng-click="addComment()"  class="btn btn-primary">Add</button>
+  </div>
+  <hr>
+
+  <div class="footer">
+    
+  </div>
+
+</div>
